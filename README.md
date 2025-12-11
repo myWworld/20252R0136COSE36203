@@ -26,7 +26,7 @@ classical baseline(baseline_model.py) 실행
 active learning 후보 추출(sentiment_utils.py)
 
 # 2. Classical Baseline & Data Pipeline
-## baseline_model.py -> active learning용으로 사용후 노트북에선 사용안함 BERT 모델이 주모델임
+## baseline_model.py -> active learning용으로 사용 현재 노트북에선 사용안함(주석처리) BERT 모델이 주모델임
 
 classical ML baseline 전체 파이프라인을 자동 실행하는 스크립트입니다.
 

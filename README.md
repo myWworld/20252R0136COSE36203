@@ -1,6 +1,4 @@
-## 기존 학습된 파일이 없다면 YouTube_Comment_Sentiment_Unified.ipynb에서 두번 째 셀부터 실행하면 된다
-## https://drive.google.com/file/d/1CSZHLOvhcNfRlcJfelGmcb6PuAeSkJTR/view?usp=drive_link에서 학습된 파일 bert_sentiment.zip을 다운받아 구글 드라이브 Mydrive에 업로드할 경우 첫번째 셀과 마지막 셀만 실행하면된다.
-## 학습을 위해선 반드시 comments_labeled_for_training.csv형식(열에 text,label이 반드시 존재) 파일이 존재해야하며 / 추론을 위해선 comments_for_inference.csv(열에 text 반드시 존재) 형식이 있어야 한다. 
+## 추가 bert_model.py YouTube_Comment_Sentiment_Unified.ipynb의 동일한 기능을 가진 py 스크립트
 
 # 📁 Repository Structure
 # 1. Jupyter Notebook

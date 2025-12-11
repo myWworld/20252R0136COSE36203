@@ -1,5 +1,5 @@
 ## 실행은 YouTube_Comment_Sentiment_Unified.ipynb에서 run all
-## https://drive.google.com/drive/folders/1cwqWxdrohAwiMMEQJ0v3LLzjo3ehx-PF?usp=drive_link에서 bert_sentiment로 파일 content에 올릴 경우 학습돼있는 모델 바로 사용가능
+## https://drive.google.com/drive/folders/1cwqWxdrohAwiMMEQJ0v3LLzjo3ehx-PF?usp=drive_link에서 bert_sentiment 파일 content에 올릴 경우 학습돼있는 모델 바로 사용가능
 ## 학습을 위해선 반드시 comments_labeled_for_training.csv형식(열에 text,label이 반드시 존재) 파일이 존재해야하며 / 추론을 위해선 comments_for_inference.csv(열에 text 반드시 존재) 형식이 있어야 한다. 
 
 # 📁 Repository Structure

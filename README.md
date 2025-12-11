@@ -19,14 +19,14 @@ BERT 기반 sentiment classifier fine-tuning
 
 새로운 댓글에 대한 inference 실행
 
-과거 기능 (현재는 주석 처리됨)
+#### 과거 기능 (현재는 주석 처리됨)
 
 classical baseline(baseline_model.py) 실행
 
 active learning 후보 추출(sentiment_utils.py)
 
 # 2. Classical Baseline & Data Pipeline
-## baseline_model.py
+## baseline_model.py -> active learning용으로 사용후 노트북에선 사용안함 BERT 모델이 주모델임
 
 classical ML baseline 전체 파이프라인을 자동 실행하는 스크립트입니다.
 

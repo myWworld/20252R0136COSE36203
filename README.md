@@ -1,14 +1,13 @@
-실행은 YouTube_Comment_Sentiment_Unified.ipynb에서 run all 누르면 됨. 
-학습을 위해선 반드시 comments_labeled_for_training.csv형식(열에 text,label이 반드시 존재) 파일이 존재 해야하며
-추론을 위해선 comments_for_inference.csv(열에 text 반드시 존재) 형식이 있어야 한다. 
+## 실행은 YouTube_Comment_Sentiment_Unified.ipynb에서 run all
+## 학습을 위해선 반드시 comments_labeled_for_training.csv형식(열에 text,label이 반드시 존재) 파일이 존재해야하며 / 추론을 위해선 comments_for_inference.csv(열에 text 반드시 존재) 형식이 있어야 한다. 
 
-📁 Repository Structure
-1. Jupyter Notebook
+# 📁 Repository Structure
+# 1. Jupyter Notebook
 YouTube_Comment_Sentiment_Unified.ipynb
 
 전체 프로젝트를 통합해 실행하는 메인 노트북입니다.
 
-주요 기능
+### 주요 기능
 
 YouTube 댓글 전처리 및 데이터 정제
 
@@ -26,13 +25,13 @@ classical baseline(baseline_model.py) 실행
 
 active learning 후보 추출(sentiment_utils.py)
 
-2. Classical Baseline & Data Pipeline
-baseline_model.py
+# 2. Classical Baseline & Data Pipeline
+## baseline_model.py
 
 classical ML baseline 전체 파이프라인을 자동 실행하는 스크립트입니다.
 
-주요 역할
-🔹 라벨 병합 (merge_all_manual_golds)
+### 주요 역할
+#### 🔹 라벨 병합 (merge_all_manual_golds)
 
 기존 weak label + manual_label round 파일 병합
 
@@ -42,7 +41,7 @@ weak 데이터는 weak_frac 비율로 downsample 후 병합
 
 최종 출력: comments_labeled_merged.csv
 
-🔹 baseline 모델 학습 (baseline_once)
+#### 🔹 baseline 모델 학습 (baseline_once)
 
 TF-IDF(word/char) + neg lexicon feature + Logistic Regression
 
@@ -50,7 +49,7 @@ valid set 기반 macro-F1 최적 hyperparam + tau(neutral threshold) 탐색
 
 최종 모델 저장: artifacts/classic/
 
-🔹 옵션: inference + n-gram 분석 (optional_outputs)
+#### 🔹 옵션: inference + n-gram 분석 (optional_outputs)
 
 새로운 CSV에 대한 batch prediction
 
@@ -62,13 +61,13 @@ classical baseline / active learning 용도의 레거시 파이프라인
 
 BERT fine-tuning 이후로는 비교용 또는 보조 데이터 생성에 사용
 
-3. Shared Utilities / Classic Model Logic
-sentiment_utils.py
+# 3. Shared Utilities / Classic Model Logic
+## sentiment_utils.py
 
 데이터 처리, feature 생성, classical 모델 구성, active learning, inference까지
 전반을 담당하는 공용 유틸리티 파일입니다.
 
-🔹 Lexicon & Feature
+### 🔹 Lexicon & Feature
 NEG_LEXICON
 
 한국어 + 영어 부정 표현 사전
@@ -82,7 +81,7 @@ lexicon 포함 여부를 0/1 sparse matrix로 변환
 
 TF-IDF와 함께 부정 신호 강화 feature로 사용
 
-🔹 Data Helpers
+### 🔹 Data Helpers
 clean(t)
 
 URL, @mention 제거
@@ -99,7 +98,7 @@ split_train_valid_test
 
 stratified 방식 train/valid/test 분리
 
-🔹 Classic Model: ClassicSentiment
+### 🔹 Classic Model: ClassicSentiment
 
 TF-IDF(word) + TF-IDF(char) + lexicon feature → hstack
 
@@ -117,7 +116,7 @@ save(out_dir)
 
 load(out_dir)
 
-🔹 Neutral Policy & Grid Search
+### 🔹 Neutral Policy & Grid Search
 apply_neutral_policy
 
 max proba < tau → 강제 neutral
@@ -130,7 +129,7 @@ small_grid_search
 
 valid 기반 macro-F1 최적 config 선택
 
-🔹 Active Learning
+### 🔹 Active Learning
 select_active_learning_candidates
 
 기존 baseline 모델로 low-confidence 샘플 선별
@@ -139,7 +138,7 @@ SVD + KMeans cluster로 그룹화
 
 cluster별 대표 ambiguous 샘플 선택
 
-🔹 Batch Inference & N-gram 분석
+### 🔹 Batch Inference & N-gram 분석
 batch_predict
 
 새로운 CSV에 대해 pred, p_neg, p_neu, p_pos 추가
@@ -154,8 +153,8 @@ label별 특징적 n-gram 추출
 
 chi-square score 기반 ranking 후 CSV export
 
-4. Data Files
-comments_labeled_for_training.csv
+# 4. Data Files
+## comments_labeled_for_training.csv
 
 BERT fine-tuning에 사용된 최종 라벨링 데이터셋
 

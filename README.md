@@ -1,5 +1,5 @@
 ## 기존 학습된 파일이 없다면 YouTube_Comment_Sentiment_Unified.ipynb에서 run all
-## [https://drive.google.com/drive/folders/1cwqWxdrohAwiMMEQJ0v3LLzjo3ehx-PF?usp=drive_link](https://drive.google.com/drive/folders/1XWcnMNN7Vy-yuH1BYqdybiDkOTBBRGnt?usp=sharing)에서 학습된 파일 bert_sentiment을 Mydrive에 올릴 경우 drive/content에 올리는 첫번째 셀과 마지막 셀만 실행하면된다.
+## https://drive.google.com/file/d/1CSZHLOvhcNfRlcJfelGmcb6PuAeSkJTR/view?usp=drive_link에서 학습된 파일 bert_sentiment.zip을 다운받아 구글 드라이브 Mydrive에 업로드할 경우 첫번째 셀과 마지막 셀만 실행하면된다.
 ## 학습을 위해선 반드시 comments_labeled_for_training.csv형식(열에 text,label이 반드시 존재) 파일이 존재해야하며 / 추론을 위해선 comments_for_inference.csv(열에 text 반드시 존재) 형식이 있어야 한다. 
 
 # 📁 Repository Structure

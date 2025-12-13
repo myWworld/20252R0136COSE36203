@@ -1,3 +1,5 @@
+# 유튜브 영상 태그, 반응 분석 리포트 생성기
+
 ## https://github.com/sdouf5054/20252R0136COSE36203 최종 파이프라인
 
 ## 추가 bert_model.py YouTube_Comment_Sentiment_Unified.ipynb의 동일한 기능을 가진 py 스크립트

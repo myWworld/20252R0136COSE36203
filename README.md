@@ -3,8 +3,9 @@
 ## https://github.com/sdouf5054/20252R0136COSE36203 최종 파이프라인
 
 ## 추가 bert_model.py YouTube_Comment_Sentiment_Unified.ipynb의 동일한 기능을 가진 py 스크립트
+## 이하 코드는 유튜브 댓글에 대한 반응을 부정, 중립, 긍정으로 분석하는 모델이다.
 
-# 📁 Repository Structure
+# 📁 Repository Structure 
 # 1. Jupyter Notebook
 YouTube_Comment_Sentiment_Unified.ipynb
 
